@@ -6,7 +6,7 @@ const tasaprima = 0.005;
 
 let arrayMarcasModelos = []
 
-fetch("./marcasmodelos.json")
+fetch("./data/marcasmodelos.json")
 .then(response => {
   if(!response.ok) 
   {
