@@ -1,0 +1,38 @@
+{
+    "marcas": [
+        {
+            "id": "1",
+            "nombre": "Alfa Romeo",
+            "urlimagen": "alfaromeo.jpg",
+            "modelos": [
+            { "id": "1111", "nombre": "147 1.9 JTD 5 PTAS", "valorVehiculo": 12550000 },
+            { "id": "2222", "nombre": "147 2.0 TS 5 PTAS", "valorVehiculo": 19210000 },
+            { "id": "3333", "nombre": "MITO 1.4 TBI QUADRIFOGLIO", "valorVehiculo": 32200000 }
+            ]
+        },
+        {
+            "id": "2",
+            "nombre": "AUDI",
+            "urlimagen": "audi.jpg",
+            "modelos": [
+            { "id": "4444", "nombre": "A1 1.4T AMBITION", "valorVehiculo": 28550000 },
+            { "id": "5555", "nombre": "A4 2.0 T L/12 ATTRACTION", "valorVehiculo": 37250000 },
+            { "id": "6666", "nombre": "A5 2.0 T QUATTRO S TRONIC", "valorVehiculo": 41250000 }
+            ]
+        },
+        {
+            "id": "3",
+            "nombre": "BMW",
+            "urlimagen": "bmw.jpg",
+            "modelos": [
+            { "id": "7777", "nombre": "220I COUPE SPORT LINE", "valorVehiculo": 28550000 }
+            ]
+        },
+        {
+            "id": "4",
+            "urlimagen": "ferrari.jpg",
+            "nombre": "Ferrari",
+            "modelos": []
+        }
+    ]
+}

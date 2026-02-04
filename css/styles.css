@@ -1,0 +1,265 @@
+/* ========== RESET BÁSICO ========== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #111827;
+    background-color: #f3f4f6;
+  
+    /* Que se apilen uno abajo del otro */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* para centrar horizontalmente el contenido */
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1100px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px 24px 40px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+
+/* Como tu HTML no tiene .main-container, la agregamos por JS
+   o podés envolver todo el contenido en un <div class="main-container">.
+   Mientras tanto, aplicamos algo decente al body directo: */
+
+body > p:first-of-type,
+body > hr,
+body > h1,
+body > h2,
+body > div,
+body > p:last-of-type {
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Centrar todo el contenido en el eje X */
+body > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========== TIPOGRAFÍA ========== */
+
+h1 {
+  font-size: 24px;
+  margin: 16px 0 8px;
+  color: #111827;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 10px 0 8px;
+  color: #1f2937;
+}
+
+p {
+  margin: 6px 0;
+}
+
+/* Texto de sección “tp” arriba */
+body > p:first-of-type {
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* Separadores */
+hr {
+  margin: 20px 0;
+}
+
+/* ========== BLOQUES PRINCIPALES ========== */
+
+.section {
+  margin-bottom: 32px;
+  padding: 16px 18px;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+/* Aplica estilo tipo sección a los bloques del TP */
+#divAdminMarcas,
+#divAgregarMarca,
+#divAdminModelos,
+#marcas,
+#modelos,
+#resultado {
+  margin-top: 8px;
+}
+
+/* ========== CONTENEDORES DE ADMIN ========== */
+
+#divAdminMarcas,
+#divAdminModelos {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  min-height: 60px;
+}
+
+#divAgregarMarca {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px dashed #9ca3af;
+  background-color: #f9fafb;
+}
+
+/* Títulos de bloques */
+#tituloModelo {
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+/* ========== COTIZADOR ========== */
+
+#marcas,
+#modelos {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  min-height: 70px;
+}
+
+/* Resultado de la cotización */
+#resultado {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #ecfdf3;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+  font-weight: 500;
+}
+
+/* Si está vacío, que no se note tanto */
+#resultado:empty {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+/* ========== LOGO ========== */
+
+#logo {
+  display: block;
+  max-width: 200px;
+  max-height: 80px;
+  object-fit: contain;
+  margin: 16px 0;
+}
+
+/* ========== BOTONES Y FORMULARIOS (por si los creás con JS) ========== */
+
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition:
+      background-color 0.15s ease,
+      box-shadow 0.15s ease,
+      transform 0.05s ease;
+  
+    /* 👇 ESPACIADO ENTRE BOTONES */
+    margin-right: 8px;
+    margin-bottom: 6px;
+  }
+
+button:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+input,
+select {
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.18);
+}
+
+/* ========== TABLAS / LISTADOS (si generás tablas con JS) ========== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+thead {
+  background-color: #f3f4f6;
+}
+
+tr:nth-child(even) td {
+  background-color: #fafafa;
+}
+
+tr:hover td {
+  background-color: #eff6ff;
+}
+
+/* ========== RESPONSIVE SIMPLE ========== */
+
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
